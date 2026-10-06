@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Tu Nombre</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            color: #16a085;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .contact-info span {
+            display: inline-block;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        section h3 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: bold;
+        }
+
+        .item-header .title {
+            color: #333;
+        }
+
+        .item-header .date {
+            color: #777;
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+
+        .item-subtitle {
+            color: #16a085;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .skills-list li {
+            background-color: #eef2f5;
+            color: #2c3e50;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <!-- ENCABEZADO / CONTACTO -->
+        <header>
+            <h1>Tu Nombre Apellido</h1>
+            <h2>Título Profesional / Especialidad</h2>
+            <div class="contact-info">
+                <span>📍 Ciudad, País</span>
+                <span>📞 +00 123 456 789</span>
+                <span>✉️ tu.email@example.com</span>
+                <span>🔗 linkedin.com/in/usuario</span>
+            </div>
+        </header>
+
+        <!-- PERFIL PROFESIONAL -->
+        <section>
+            <h3>Perfil Profesional</h3>
+            <p>
+                Profesional proactivo y orientado a resultados con más de X años de experiencia en [Tu Área de Especialidad]. Demostrada capacidad para [mencionar logro principal o habilidad clave, ej. liderar equipos, desarrollar software escalar, optimizar procesos]. Apasionado por [tu interés relevante].
+            </p>
+        </section>
+
+        <!-- EXPERIENCIA LABORAL -->
+        <section>
+            <h3>Experiencia Laboral</h3>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="title">Nombre del Cargo</span>
+                    <span class="date">Enero 2022 – Presente</span>
+                </div>
+                <div class="item-subtitle">Nombre de la Empresa | Ciudad, País</div>
+                <ul>
+                    <li>Logro o responsabilidad principal en la empresa, usando verbos de acción.</li>
+                    <li>Lideró un proyecto que incrementó [métrica de éxito, ej. la eficiencia en un 20%].</li>
+                    <li>Gestión de tareas clave relativas a la posición.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="title">Nombre del Cargo Anterior</span>
+                    <span class="date">Marzo 2019 – Diciembre 2021</span>
+                </div>
+                <div class="item-subtitle">Nombre de la Empresa | Ciudad, País</div>
+                <ul>
+                    <li>Coordinó actividades enfocadas en la entrega puntal de resultados.</li>
+                    <li>Implementó mejoras en el flujo de trabajo operativo.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section>
+            <h3>Educación</h3>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="title">Título Universitario o Grado</span>
+                    <span class="date">2015 – 2019</span>
+                </div>
+                <div class="item-subtitle">Nombre de la Universidad o Institución</div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section>
+            <h3>Habilidades Técnicas</h3>
+            <ul class="skills-list">
+                <li>Habilidad 1</li>
+                <li>Habilidad 2</li>
+                <li>Habilidad 3</li>
+                <li>Herramienta / Software</li>
+                <li>Gestión de proyectos</li>
+                <li>Idioma (Inglés Avanzado)</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
