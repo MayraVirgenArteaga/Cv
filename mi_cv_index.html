@@ -1,228 +1,253 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Tu Nombre</title>
+    <title>Currículum Vitae - Mayra Elena Virgen Arteaga</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #1a1a1a;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-            padding: 20px;
         }
 
-        .cv-container {
+        .container {
             max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 3rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
 
         header {
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        header h1 {
-            color: #2c3e50;
-            font-size: 2.2rem;
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-email {
+            color: #333333;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Botón de Editar */
+        .btn-editar {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-editar:hover {
+            background-color: #444444;
+        }
+
+        h2 {
+            font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: #000000;
+            margin: 1.8rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #cccccc;
         }
 
-        header h2 {
-            color: #16a085;
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-top: 5px;
+        p {
+            margin-bottom: 0.8rem;
+            color: #2d2d2d;
         }
 
-        .contact-info {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+        .job, .education-item, .skill-item, .cert-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .job h3, .education-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .job .company, .education-item .institution {
             font-size: 0.9rem;
-            color: #555;
+            color: #444444;
         }
 
-        .contact-info span {
-            display: inline-block;
-        }
-
-        section {
-            margin-bottom: 25px;
-        }
-
-        section h3 {
-            color: #2c3e50;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .item {
-            margin-bottom: 15px;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-weight: bold;
-        }
-
-        .item-header .title {
-            color: #333;
-        }
-
-        .item-header .date {
-            color: #777;
+        .job .period, .education-item .period {
             font-size: 0.85rem;
-            font-weight: normal;
-        }
-
-        .item-subtitle {
-            color: #16a085;
-            font-style: italic;
-            font-size: 0.95rem;
-            margin-bottom: 5px;
+            color: #666666;
         }
 
         ul {
-            list-style-type: square;
-            margin-left: 20px;
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
             list-style: none;
-            margin-left: 0;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
         }
 
-        .skills-list li {
-            background-color: #eef2f5;
-            color: #2c3e50;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        ul li::before {
+            content: "▸";
+            color: #000000;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
 
-        @media print {
-            body {
-                background-color: #fff;
-                padding: 0;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+                margin: 0;
             }
-            .cv-container {
-                box-shadow: none;
-                padding: 0;
-                width: 100%;
-                max-width: 100%;
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="cv-container">
-        
-        <!-- ENCABEZADO / CONTACTO -->
+    <div class="container">
         <header>
-            <h1>Tu Nombre Apellido</h1>
-            <h2>Título Profesional / Especialidad</h2>
-            <div class="contact-info">
-                <span>📍 Ciudad, País</span>
-                <span>📞 +00 123 456 789</span>
-                <span>✉️ tu.email@example.com</span>
-                <span>🔗 linkedin.com/in/usuario</span>
-            </div>
+            <h1>Mayra Elena Virgen Arteaga</h1>
+            <p class="contact-email">cj1f8224@gmail.com</p>
+            <button class="btn-editar">✏️ Editar</button>
         </header>
 
-        <!-- PERFIL PROFESIONAL -->
         <section>
-            <h3>Perfil Profesional</h3>
-            <p>
-                Profesional proactivo y orientado a resultados con más de X años de experiencia en [Tu Área de Especialidad]. Demostrada capacidad para [mencionar logro principal o habilidad clave, ej. liderar equipos, desarrollar software escalar, optimizar procesos]. Apasionado por [tu interés relevante].
-            </p>
+            <h2>Perfil Profesional</h2>
+            <p>Profesional polivalente con enfoque colaborativo y capacidad de adaptación a entornos dinámicos. Poseo competencias técnicas en desarrollo web, diseño gráfico, procesamiento de datos y herramientas informáticas, complementadas con experiencia práctica en gestión de inventarios, atención al usuario y optimización de flujos operativos. Formación continua en tecnologías de la información, inteligencia artificial y ciclo de vida del software.</p>
         </section>
 
-        <!-- EXPERIENCIA LABORAL -->
         <section>
-            <h3>Experiencia Laboral</h3>
-            
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Nombre del Cargo</span>
-                    <span class="date">Enero 2022 – Presente</span>
+            <h2>Competencias Técnicas</h2>
+            <div class="skills-grid">
+                <div>
+                    <strong>Desarrollo Web</strong>
+                    <ul>
+                        <li>Maquetación y estructuración de sitios web</li>
+                        <li>Diseño de interfaces y experiencia de usuario</li>
+                        <li>Gestión de contenido y mantenimiento web</li>
+                    </ul>
                 </div>
-                <div class="item-subtitle">Nombre de la Empresa | Ciudad, País</div>
+                <div>
+                    <strong>Diseño Gráfico</strong>
+                    <ul>
+                        <li>Creación de material visual y piezas gráficas</li>
+                        <li>Composición, tipografía y teoría del color</li>
+                        <li>Preparación de archivos para impresión y digital</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Tecnologías de la Información</strong>
+                    <ul>
+                        <li>Conocimientos básicos de infraestructura y redes</li>
+                        <li>Gestión de datos en hojas de cálculo (Excel)</li>
+                        <li>Automatización de tareas administrativas</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Inteligencia Artificial y Software</strong>
+                    <ul>
+                        <li>Prácticas en implementación de herramientas de IA</li>
+                        <li>Análisis de requerimientos y uso de software</li>
+                        <li>Procesamiento de información asistido por IA</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="job">
+                <h3>Auxiliar de Cocina</h3>
+                <p class="company">La Mora · Tlajomulco de Zúñiga</p>
+                <p class="period">Enero 2025 — Julio 2025</p>
                 <ul>
-                    <li>Logro o responsabilidad principal en la empresa, usando verbos de acción.</li>
-                    <li>Lideró un proyecto que incrementó [métrica de éxito, ej. la eficiencia en un 20%].</li>
-                    <li>Gestión de tareas clave relativas a la posición.</li>
+                    <li>Preparación y manipulación de alimentos conforme a normativas de higiene y seguridad</li>
+                    <li>Coordinación operativa en equipo para cumplimiento de tiempos de servicio</li>
+                    <li>Control de existencias y organización de insumos</li>
                 </ul>
             </div>
 
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Nombre del Cargo Anterior</span>
-                    <span class="date">Marzo 2019 – Diciembre 2021</span>
-                </div>
-                <div class="item-subtitle">Nombre de la Empresa | Ciudad, País</div>
+            <div class="job">
+                <h3>Auxiliar Multifuncional</h3>
+                <p class="company">Cappel · Tlajomulco de Zúñiga</p>
+                <p class="period">Periodo anterior</p>
                 <ul>
-                    <li>Coordinó actividades enfocadas en la entrega puntal de resultados.</li>
-                    <li>Implementó mejoras en el flujo de trabajo operativo.</li>
+                    <li>Atención y orientación al cliente con enfoque en calidad de servicio</li>
+                    <li>Gestión de limpieza y mantenimiento de instalaciones</li>
+                    <li>Automatización y control de registros de inventario</li>
                 </ul>
             </div>
         </section>
 
-        <!-- EDUCACIÓN -->
         <section>
-            <h3>Educación</h3>
+            <h2>Formación Académica</h2>
             
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Título Universitario o Grado</span>
-                    <span class="date">2015 – 2019</span>
-                </div>
-                <div class="item-subtitle">Nombre de la Universidad o Institución</div>
+            <div class="education-item">
+                <h3>Bachillerato</h3>
+                <p class="institution">Colegio Plantel 10 · Tlajomulco de Zúñiga, Jalisco</p>
+                <p class="period">Agosto 2020 — Julio 2024</p>
             </div>
         </section>
 
-        <!-- HABILIDADES -->
         <section>
-            <h3>Habilidades Técnicas</h3>
-            <ul class="skills-list">
-                <li>Habilidad 1</li>
-                <li>Habilidad 2</li>
-                <li>Habilidad 3</li>
-                <li>Herramienta / Software</li>
-                <li>Gestión de proyectos</li>
-                <li>Idioma (Inglés Avanzado)</li>
+            <h2>Certificaciones y Formación Complementaria</h2>
+            
+            <div class="cert-item">
+                <p><strong>Curso de Informática — Avalado por la SEP</strong><br>
+                Formación integral en sistemas informáticos, manejo de software de productividad, redes y gestión de información digital.</p>
+            </div>
+            
+            <div class="cert-item">
+                <p><strong>Certificado de Cisco</strong><br>
+                Conceptos fundamentales de redes, conectividad y arquitectura de sistemas.</p>
+            </div>
+            
+            <div class="cert-item">
+                <p><strong>Prácticas en Inteligencia Artificial y Desarrollo de Software</strong><br>
+                Aplicación práctica de herramientas de IA, soporte en procesos de desarrollo, documentación y pruebas de software.</p>
+            </div>
+            
+            <div class="cert-item">
+                <p><strong>Certificado de Bachillerato</strong><br>
+                Constancia de conclusión de estudios de nivel medio superior.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas y Profesionales</h2>
+            <ul>
+                <li>Conocimientos básicos de computación, paquetería Office y Excel</li>
+                <li>Generalista en desarrollo de sitios web y diseño gráfico digital</li>
+                <li>Análisis de datos, control de inventarios y gestión de registros</li>
+                <li>Comunicación efectiva, trabajo en equipo y resolución de problemas</li>
+                <li>Aprendizaje continuo y adaptabilidad a nuevas tecnologías</li>
             </ul>
         </section>
-
     </div>
-
 </body>
 </html>
